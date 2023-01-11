@@ -1,7 +1,6 @@
-import logo from './logo.png';
-import './App.css';
+import './style.css';
 
-function App() {
+function LoadingEnd() {
   return (
     <div className="App">
       <div className="loading">
@@ -15,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoadingEnd;

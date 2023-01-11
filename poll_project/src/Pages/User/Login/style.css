@@ -1,0 +1,64 @@
+form{
+    background-image: url("../../../assets/img/background.png");
+    height: inherit;
+    max-height: 550px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px 30px 0 0;
+}
+form h2 {
+    padding-top: 40px;
+}
+
+.App{
+    height: 100vh;
+}
+
+.logo{
+    height: 180px;
+    margin-bottom: 40px;
+}
+
+form label{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.form-grid{
+    padding: 0 50px;
+}
+
+.form-grid label input{
+    border-radius: 4px;
+    border: 1px solid #8188C2;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 7px;
+}
+
+.btn-submit{
+    background-color: #2F343C;
+    border: none;
+    color: #F4F4F4;
+    padding: 15px 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    float: left;
+}
+
+.form-grid .pin-code{
+    width: 150px;
+    margin: auto;
+    text-align: center;
+}
+.form-grid .pin-code input{
+    border-radius: 4px 4px 0 0;
+    border-bottom-width: 4px;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 5px;
+}
