@@ -7,6 +7,9 @@ import Question from './Pages/User/Question/Question.jsx';
 
 import LoginUser from './Pages/User/Login/Login.jsx';
 import Questions from './Pages/User/Questions/Questions.jsx';
+
+import Loading from './Pages/User/Loading/Loading.jsx';
+import LoadingEnd from './Pages/User/Loading/Loading-end';
 import './App.css';
 
 import {  BrowserRouter,  Routes,  Route, } from "react-router-dom";
@@ -29,6 +32,9 @@ function App() {
 
           {/* doit etre dynamique, slug dynamique */}
           <Route path='/questions' element={<Questions />}></Route>
+
+          <Route path='/loading' element={<Loading />}></Route>
+          <Route path='/end' element={<LoadingEnd />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
