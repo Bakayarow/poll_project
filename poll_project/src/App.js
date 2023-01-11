@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
@@ -27,7 +28,7 @@ function App() {
 function Question() {
   return (
     <Router>
-      <Route path="/new-page" component={Question} />
+      <Route path="/question" component={Question} />
     </Router>
   );
 }
