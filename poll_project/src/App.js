@@ -22,4 +22,15 @@ function App() {
   );
 }
 
+
+
+function Question() {
+  return (
+    <Router>
+      <Route path="/new-page" component={Question} />
+    </Router>
+  );
+}
+
+
 export default App;
