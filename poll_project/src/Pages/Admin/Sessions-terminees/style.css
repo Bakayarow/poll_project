@@ -1,0 +1,13 @@
+.session--liste {
+    list-style-type: none;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #C2E7DE;
+    width: 15vw;
+    margin: 10px auto;
+}
+
+.container {
+    width: 50vw;
+    border: 1px solid black;
+}
