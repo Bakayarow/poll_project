@@ -1,0 +1,11 @@
+.btn--custom {
+    display: flex;
+    margin: 1rem auto;
+    padding : 0.5rem 2rem ;
+    font-weight: bold;
+    width: 20vw;
+}
+
+.title_line {
+    width: 20vw;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class Question extends Component {
   render() {
     return (
@@ -10,4 +11,4 @@ class Question extends Component {
   }
 }
 
-export default NewPage;
+export default Question;
