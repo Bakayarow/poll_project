@@ -18,27 +18,30 @@ function Login() {
         <div className="header-logo-container">
             <img src={logo} alt=""/>
         </div>
-        <form onSubmit={handleSubmit}>
-        <label>
-            Username:
-            <input
-            type="text"
-            value={username}
-            onChange={event => setUsername(event.target.value)}
-            />
-        </label>
-        <br />
-        <label>
-            Password:
-            <input
-            type="password"
-            value={password}
-            onChange={event => setPassword(event.target.value)}
-            />
-        </label>
-        <br />
-        <button type="submit">Log In</button>
-        </form>
+        <div className="bloc--bg-gradient">
+          <form onSubmit={handleSubmit}>
+          <label className='form--label'>
+              USERNAME
+              <input
+              type="text"
+              value={username}
+              onChange={event => setUsername(event.target.value)}
+              />
+          </label>
+          <br />
+          <label className='form--label'>
+              PASSWORD
+              <input
+              type="password"
+              value={password}
+              onChange={event => setPassword(event.target.value)}
+              />
+          </label>
+          <br />
+          <button className="btn--custom" type="submit">Log In</button>
+          </form>
+        </div>
+
     </section>
   );
 }

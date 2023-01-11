@@ -1,11 +1,18 @@
 .btn--custom {
-    display: flex;
-    margin: 1rem auto;
-    padding : 0.5rem 2rem ;
-    font-weight: bold;
+    display: block;
+    text-align: center;
     width: 20vw;
+    padding: 1em;
+    margin: 20px auto;
+    background-color: #2F343C;
+    color: white;
+    font-size: large;
 }
 
 .title_line {
     width: 20vw;
+}
+
+.header-logo-container{
+    height: 30vh;
 }
