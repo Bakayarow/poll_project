@@ -2,7 +2,7 @@ import './style.css';
 
 function LoadingEnd() {
   return (
-    <div className="App">
+    <div className="App-loading">
       <div className="loading">
         <div className='loading-infos'>
           <h2>Merci !</h2>

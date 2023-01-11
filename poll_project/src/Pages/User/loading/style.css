@@ -17,7 +17,7 @@
     text-align: center;
 }
 
-.App{
+.App-loading{
     background-image: url("../../../assets/img/background.png");
     background-size: cover;
     background-repeat: no-repeat;
