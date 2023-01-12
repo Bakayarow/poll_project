@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
 
 function SessionsAVenir() {
+  const navigate = useNavigate();
   const [sessionsComing, setSessionsComing ] = useState([])
 
   const getsessionsComing = async () =>{
@@ -33,12 +36,17 @@ function SessionsAVenir() {
         </div>
         <div className='container'>
           <h2 className="bloc--title">SESSIONS A VENIR</h2>
-          <ul>
-                {
-                sessionsComing.map(session  => <li className='session--liste' key={session.id}>{session.name}</li>)
-               }
-               
-            </ul>
+          
+            { sessionsComing.map(session  =>(
+                <div className='item-section' key={session.id}>
+                  <li className="session--liste">{session.name}</li>
+                  <button 
+                    className='item-detail-btn'
+                    onClick={() => navigate(`/session/detail/${session.id}`)}
+                    >Voir</button>
+                </div>
+            ) ) }
+        
         </div>
     </section>
   );
