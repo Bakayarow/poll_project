@@ -1,9 +1,35 @@
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay, faPen } from '@fortawesome/free-solid-svg-icons'
 
 function SessionsAVenir() {
+  const navigate = useNavigate();
+  const [sessionsComing, setSessionsComing ] = useState([])
+
+  const getsessionsComing = async () =>{
+    try {    
+        const res = await fetch("http://localhost:1337/api/sessions/coming");
+        const data = await res.json()
+    
+        setSessionsComing(data)
+      
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+  useEffect(() =>{
+    getsessionsComing ()
+  },[])
+
+
+
+
+
 
   return (
     <section >
@@ -12,29 +38,23 @@ function SessionsAVenir() {
         </div>
         <div className='container'>
           <h2 className="bloc--title">SESSIONS A VENIR</h2>
-            <ul>
-                <li className='session--liste'>
-                  Boucle sur les sessions à venir
-                  <div className="icon--couple">
-                  <i><FontAwesomeIcon icon={faPen} /></i>
-                  <i><FontAwesomeIcon icon={faCirclePlay} /></i>
-                  </div>
-                </li>
-                <li className='session--liste'>
-                  Boucle sur les sessions à venir
-                  <div className="icon--couple">
-                  <i><FontAwesomeIcon icon={faPen} /></i>
-                  <i><FontAwesomeIcon icon={faCirclePlay} /></i>
-                  </div>
-                </li>
-                <li className='session--liste'>
-                  Boucle sur les sessions à venir
-                  <div className="icon--couple">
-                  <i><FontAwesomeIcon icon={faPen} /></i>
-                  <i><FontAwesomeIcon icon={faCirclePlay} /></i>
-                  </div>
-                </li>
-            </ul>
+          
+            { sessionsComing.map(session  =>(
+                <div className='item-section' key={session.id}>
+                  <li className="session--liste">{session.name}</li>
+                  <button 
+                    className='item-detail-btn'
+                    onClick={() => navigate(`/session/detail/${session.id}`)}
+                    >Voir</button>
+
+
+                    {/* <i><FontAwesomeIcon icon={faPen} /></i>
+                    <i><FontAwesomeIcon icon={faCirclePlay} /></i> */}
+
+
+                </div>
+            ) ) }
+        
         </div>
     </section>
   );

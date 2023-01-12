@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -5,6 +6,29 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 
 function SessionsTerminees() {
+  const [sessionsEnd, setsessionsEnd ] = useState([])
+
+  const getsessionsEnd = async () =>{
+    try {    
+        const res = await fetch("http://localhost:1337/api/sessions/end");
+        const data = await res.json()
+    
+        setsessionsEnd(data)
+      
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+  useEffect(() =>{
+    getsessionsEnd()
+  },[])
+
+
+
+
+
+
 
   return (
     <section >
@@ -14,9 +38,14 @@ function SessionsTerminees() {
         <div className='container'>
           <h2 className="bloc--title">SESSIONS TERMINEES</h2>
             <ul>
-                <li className='session--liste'>Boucle sur les sessions terminées <i><FontAwesomeIcon icon={faChevronRight} /></i></li>
-                <li className='session--liste'>Boucle sur les sessions terminées <i><FontAwesomeIcon icon={faChevronRight} /></i></li>
-                <li className='session--liste'>Boucle sur les sessions terminées <i><FontAwesomeIcon icon={faChevronRight} /></i></li>
+                {
+                sessionsEnd.map(session  => <li className='session--liste'>{session.name}</li>)
+               }
+
+
+              {/* <i><FontAwesomeIcon icon={faChevronRight} /></i> */}
+
+               
             </ul>
         </div>
     </section>
