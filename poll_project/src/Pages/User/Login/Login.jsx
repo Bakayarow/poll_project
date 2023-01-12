@@ -5,7 +5,7 @@ function LoginUser() {
   return (
     <div className="App">
       <img className='logo' src={logo} alt="logo" />
-      <form>
+      <form className='form-login'>
         <h2>BIENVENUE !</h2>
         <div className='form-grid'>
             <label className='pin-code'>
