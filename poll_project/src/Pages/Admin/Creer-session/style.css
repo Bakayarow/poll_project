@@ -1,0 +1,17 @@
+.bloc--bg-lightGreen {
+    background-color: #C2E7DE;
+}
+
+.bloc--bg-lightGreen form {
+    margin-top: 5vh;
+}
+.bloc--bg-lightGreen label {
+    margin-top: 3vh;
+}
+
+.bloc--bg-lightGreen button {
+    margin-top: 5vh;
+}
+input[type="date"] {
+    text-transform: uppercase;
+}
