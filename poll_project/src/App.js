@@ -16,6 +16,8 @@ import LoadingEnd from "./Pages/User/Loading/Loading-end.jsx";
 
 import Start from "./Pages/Admin/Waiting/Start.jsx";
 import Wait from "./Pages/Admin/Waiting/Wait.jsx";
+
+import SessionEnd from "./Pages/Admin/SessionEnd/Session-end.jsx";
 import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -37,8 +39,11 @@ function App() {
           <Route path="/start-session" element={<StartSession />}></Route>
           <Route path="/question-page" element={<QuestionPage />}></Route>
           <Route path="/question" element={<Question />}></Route>
-          <Route path="/creer-questions" element={<CreerQuestions />}></Route>
-          <Route path="/session/detail/:id" element={<SessionDetail />}></Route>
+          <Route
+            path="/session/detail/:id"
+            element={<CreerQuestions />}
+          ></Route>
+          {/* <Route path="/session/detail/:id" element={<SessionDetail />}></Route> */}
 
           <Route path="/join" element={<LoginUser />}></Route>
 
@@ -51,6 +56,8 @@ function App() {
           <Route path="/start" element={<Start />}></Route>
           {/* doit etre dynamique, slug dynamique */}
           <Route path="/wait" element={<Wait />}></Route>
+
+          <Route path="/session-end" element={<SessionEnd />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
