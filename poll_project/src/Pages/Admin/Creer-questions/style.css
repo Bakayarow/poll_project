@@ -19,7 +19,7 @@
 h1{
     color: white;
     text-transform: uppercase;
-    background-color: #333333;
+    background-color: #58A4B0;
     padding: 20px;
     border-radius: 10px;
     font-weight: 600;
@@ -68,6 +68,14 @@ h2{
     border: none;
     height: 40px;
     width: 30%;
+    cursor: pointer;
+}
+
+button:hover{
+    color: #333333;
+    background-color: white;
+    transition: 0.5s;
+    
 }
 
 .addquestion{
@@ -85,6 +93,7 @@ h2{
     border-radius: 0px 5px 5px 0px;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 ul{
