@@ -1,16 +1,40 @@
 import logo from '../../../assets/img/logo.png';
 import './style.css';
 import React, { useState } from 'react';
+import AuthAPI from './AuthAPI';
 
 function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [creadentials, setCredentials] = useState({
+    username:'',
+    password:''
+  });
 
-  function handleSubmit(event) {
+
+  const handleChange = ({currentTarget}) => {
+    const {value, name} = currentTarget
+    setCredentials({
+      ...creadentials,
+      [name] : value
+    })
+  }
+
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('Username: ', username);
-    console.log('Password: ', password);
-    // Perform API call or other logic here
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        identifier: "test@gmail.com",
+        password: "0000000"
+    })
+  };
+
+    const res = await fetch('http://localhost:8082/api/auth/local',requestOptions)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error.error))
+
   }
 
   return (
@@ -23,18 +47,20 @@ function Login() {
           <label className='form--label'>
               USERNAME
               <input
+              id='username'
               type="text"
-              value={username}
-              onChange={event => setUsername(event.target.value)}
+              name='username'
+              onChange={handleChange}
               />
           </label>
           <br />
           <label className='form--label'>
               PASSWORD
               <input
+              id="password"
               type="password"
-              value={password}
-              onChange={event => setPassword(event.target.value)}
+              name="password"
+              onChange={handleChange}
               />
           </label>
           <br />

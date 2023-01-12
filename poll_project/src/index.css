@@ -18,7 +18,6 @@ code {
 }
 
 .bloc--bg-gradient {
-  height: 70vh;
   background-image: url(./assets/img/bg-gradient.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,7 +28,6 @@ code {
 }
 
 .bloc--bg-gradient-rotate{
-  height: 70vh;
   background-image: url(./assets/img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
