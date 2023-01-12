@@ -24,7 +24,7 @@ export default function SessionDetail() {
       },[])
 
 
-      console.log(itemsSession)
+  
 
   return (
     <div>

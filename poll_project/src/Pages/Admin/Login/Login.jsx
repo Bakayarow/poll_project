@@ -6,13 +6,25 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log('Username: ', username);
-    console.log('Password: ', password);
-    // Perform API call or other logic here
-  }
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        identifier: "leotest@gmail.com",
+        password: "Deus2013@"
+    })
+  };
+
+   const res = await fetch(`http://localhost:1337/api/auth/local`,requestOptions)
+   .then(response => response.json())
+   .then(data => console.log(data))
+   .catch(error => console.log(error.error))
+
+  }
+ 
   return (
     <section>
         <div className="header-logo-container">

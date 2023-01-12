@@ -1,17 +1,48 @@
+import React, { useState, useEffect } from 'react';
+import {useParams} from "react-router-dom"
 import './style.css';
+
+
+
 import Nav from '../../../Components/Nav/Nav';
 import Todo from '../../../Components/Todo/Todolist';
 
 
 
 function CreerQuestions() {
+  
+  const {id} = useParams()
+  
+  const [sessionDetails, setSessionDetails ] = useState([])
+  const getSessionInfos = async () =>{
+    try {    
+        const res = await fetch(`http://localhost:1337/api/sessions/${id}`);
+        const data = await res.json()
+    
+        setSessionDetails(data.data.attributes)
+      
+    } catch (error) {
+      console.log(error)
+    }
 
+  }
+  useEffect(() =>{
+    getSessionInfos ()
+  },[])
+
+  
+
+
+  
   return (
     <section>
         <Nav />
         <div className='headersmall'>
             <div className='headertitle'>
-             <h1>Session Lorem du 01/02/2023</h1>
+            <h3>{sessionDetails.name}</h3>
+            <h3>Prévu pour le : {sessionDetails.datestart}</h3>
+
+  
              
             </div>
         </div>
@@ -19,7 +50,7 @@ function CreerQuestions() {
           <div className='blocmid'>
             <div className='topmid'>
             <h2>Questions de la session</h2>
-            <button type='submit'>Créer la session</button>
+            <button type='submit'>Démarrer la session</button>
             </div>
             <Todo />
           </div>
