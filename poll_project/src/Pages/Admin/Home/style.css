@@ -7,6 +7,11 @@
     background-color: #2F343C;
     color: white;
     font-size: large;
+    cursor: pointer;
+}
+
+.bloc--content a {
+    text-decoration: none;
 }
 
 .title_line {

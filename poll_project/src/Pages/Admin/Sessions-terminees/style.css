@@ -6,6 +6,8 @@
     width: 20vw;
     margin: 10px auto;
     text-transform: uppercase;
+    justify-content: space-between;
+    display: flex;
 }
 
 ul {
