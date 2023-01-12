@@ -13,11 +13,17 @@ function Home() {
         <Header />
         <div className='bloc--bg-gradient'>
           <div className="bloc--content">
-          <h1>VOS SESSIONS</h1>
-            <hr class="title_line"/>
-            <button type="button" className="btn--custom">SESSIONS TERMINEES</button>
-            <button type="button" className="btn--custom">SESSIONS A VENIR</button>
-            <button type="button" className="btn--custom">CREER UNE SESSION</button>
+            <h1>VOS SESSIONS</h1>
+            <hr className="title_line"/>
+            <Link to={'/sessions-terminees'}>
+              <button type="button" className="btn--custom">SESSIONS TERMINEES</button>
+            </Link>
+            <Link to={'/sessions-a-venir'}>
+              <button type="button" className="btn--custom">SESSIONS A VENIR</button>
+            </Link>
+            <Link to={'/creer-session'}>
+              <button type="button" className="btn--custom">CREER UNE SESSION</button>
+            </Link>            
           </div>
         </div>
     </section>
