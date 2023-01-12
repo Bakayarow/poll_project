@@ -10,6 +10,9 @@ import Questions from './Pages/User/Questions/questions.jsx';
 
 import Loading from './Pages/User/Loading/Loading.jsx';
 import LoadingEnd from './Pages/User/Loading/Loading-end.jsx';
+
+import Start from './Pages/Admin/Waiting/Start.jsx';
+import Wait from './Pages/Admin/Waiting/Wait.jsx';
 import './App.css';
 
 import {  BrowserRouter,  Routes,  Route, } from "react-router-dom";
@@ -35,6 +38,10 @@ function App() {
 
           <Route path='/loading' element={<Loading />}></Route>
           <Route path='/end' element={<LoadingEnd />}></Route>
+
+          <Route path='/start' element={<Start />}></Route>
+          {/* doit etre dynamique, slug dynamique */}
+          <Route path='/wait' element={<Wait />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
