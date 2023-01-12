@@ -29,7 +29,6 @@ export default function SessionEnd() {
               barWidthPercentage={0.8}
               baseConfig={config}
               style={{
-                marginBottom: 30,
                 padding: 10
               }}
             />
