@@ -12,23 +12,18 @@ function CreerQuestions() {
         <div className='headersmall'>
             <div className='headertitle'>
              <h1>Session Lorem du 01/02/2023</h1>
+             
             </div>
         </div>
         <div className='bloc--bg-gradient'>
-          <div className='blocleft'>
+          <div className='blocmid'>
+            <div className='topmid'>
             <h2>Questions de la session</h2>
+            <button type='submit'>Créer la session</button>
+            </div>
             <Todo />
           </div>
-          <div className='blocright'>
-          <div className='blocrighttop'>
-            <h2>Nombre d'invités</h2>
-            <form action="">
-            <input type="text" />
-            </form>
           </div>
-          <button type='submit'>Créer la session</button>
-          </div>
-        </div>
     </section>
   );
 }
