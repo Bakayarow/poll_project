@@ -6,10 +6,10 @@ import CreerSession from './Pages/Admin/Creer-session/Creer-session.jsx';
 import Question from './Pages/User/Question/Question.jsx';
 
 import LoginUser from './Pages/User/Login/Login.jsx';
-import Questions from './Pages/User/Questions/Questions.jsx';
+import Questions from './Pages/User/Questions/questions.jsx';
 
 import Loading from './Pages/User/Loading/Loading.jsx';
-import LoadingEnd from './Pages/User/Loading/Loading-end';
+import LoadingEnd from './Pages/User/Loading/Loading-end.jsx';
 import './App.css';
 
 import {  BrowserRouter,  Routes,  Route, } from "react-router-dom";
