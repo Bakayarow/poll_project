@@ -1,13 +1,16 @@
 import logo from '../../../assets/img/logo.png';
 import './style.css';
+import Header from '../../../Components/Header/Header';
+import NavSmall from '../../../Components/Nav/NavSmall';
+import Nav from '../../../Components/Nav/Nav';
+
 
 function Home() {
 
   return (
     <section>
-        <div className="header-logo-container">
-            <img src={logo} alt=""/>
-        </div>
+        <NavSmall />
+        <Header />
         <div className='bloc--bg-gradient'>
           <div className="bloc--content">
           <h1>VOS SESSIONS</h1>
