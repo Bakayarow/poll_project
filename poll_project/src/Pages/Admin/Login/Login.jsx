@@ -30,7 +30,7 @@ function Login() {
     })
   };
 
-    const res = await fetch('http://localhost:8082/api/auth/local4',requestOptions)
+    const res = await fetch('http://localhost:8082/api/auth/local',requestOptions)
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error.error))

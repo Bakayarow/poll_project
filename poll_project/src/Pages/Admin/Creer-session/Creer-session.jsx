@@ -28,7 +28,7 @@ function CreerSession() {
 
     // const formatData = data : sessionData;
     
-    axios.post('http://localhost:3000/api/sessions', sessionData)
+    axios.post('http://localhost:8082/api/sessions', sessionData)
       .then(function (response) {
         console.log(response);
       })
