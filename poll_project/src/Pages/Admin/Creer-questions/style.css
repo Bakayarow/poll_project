@@ -83,7 +83,8 @@ button:hover{
     border-radius: 5px 0px 0px 5px;
     border: none;
     height: 30px;
-    width: 94%;
+    width: 93%;
+    padding-left: 10px;
 }
 
 .buttonquestion{
