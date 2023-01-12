@@ -1,35 +1,34 @@
-import logo from './logo.png';
-import './App.css';
+import logo from '../../../logo.png';
+import './style.css';
 
-function App() {
+function LoginUser() {
   return (
     <div className="App">
-      <img src={logo} alt="logo" />
-
+      <img className='logo' src={logo} alt="logo" />
       <form>
-            <label>
-                Code pin session:
+        <h2>BIENVENUE !</h2>
+        <div className='form-grid'>
+            <label className='pin-code'>
+                Code pin session
                 <input type="text" name="lastname" />
             </label>
-            <input type="submit" value="Submit" />
             <label>
-                Nom:
+                Nom
                 <input type="text" name="lastname" />
             </label>
-            <input type="submit" value="Submit" />
             <label>
-                Prénom:
+                Prénom
                 <input type="text" name="firstname" />
             </label>
             <label>
-                Rôle:
+                Rôle
                 <input type="text" name="job" />
             </label>
-            <input type="submit" value="Submit" />
+            <input className='btn-submit' type="submit" value="Continuer" />
+        </div>
         </form>
     </div>
-    
   );
 }
 
-export default App;
+export default LoginUser;
