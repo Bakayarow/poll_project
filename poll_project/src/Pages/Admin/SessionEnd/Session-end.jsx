@@ -86,11 +86,11 @@ export default function SessionEnd() {
           </div>
           <div className="color-chart">
             <div className="colors color-orange"></div>
-            <p>Pas tout à fait d’accord...</p>
+            <p>Mitigé</p>
           </div>
           <div className="color-chart">
             <div className="colors color-red-demi"></div>
-            <p>Mitigé</p>
+            <p>Pas tout à fait d’accord...</p>
           </div>
           <div className="color-chart">
             <div className="colors color-red-full"></div>
