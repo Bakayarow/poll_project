@@ -39,8 +39,11 @@ function App() {
           <Route path="/start-session" element={<StartSession />}></Route>
           <Route path="/question-page" element={<QuestionPage />}></Route>
           <Route path="/question" element={<Question />}></Route>
-          <Route path="/creer-questions" element={<CreerQuestions />}></Route>
-          <Route path="/session/detail/:id" element={<SessionDetail />}></Route>
+          <Route
+            path="/session/detail/:id"
+            element={<CreerQuestions />}
+          ></Route>
+          {/* <Route path="/session/detail/:id" element={<SessionDetail />}></Route> */}
 
           <Route path="/join" element={<LoginUser />}></Route>
 
