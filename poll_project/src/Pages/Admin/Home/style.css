@@ -7,12 +7,22 @@
     background-color: #2F343C;
     color: white;
     font-size: large;
+    cursor: pointer;
+}
+
+.bloc--content a {
+    text-decoration: none;
+}
+
+.btn--custom:hover{
+    background-color: white;
+    color: #2F343C;
+    transition: 500ms;
+
 }
 
 .title_line {
     width: 20vw;
 }
 
-.header-logo-container{
-    height: 30vh;
-}
+

@@ -1,0 +1,48 @@
+.navcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.logonav{
+    width: 14%;
+    height: 90%;
+    padding: 10px;
+}
+
+.navleft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navSmallleft{
+    width: 50%;
+}  
+
+
+.navright{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.firsticon, .secondicon{
+    width: 15%;
+}
+ .navright i{
+    color: #333333;
+    font-size: 25px;
+ }
+
+ .navleft i{
+    color: #333333;
+    font-size: 25px;
+ }
+

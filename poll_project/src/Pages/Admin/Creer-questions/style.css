@@ -1,0 +1,126 @@
+.bloc--bg-gradient{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headersmall{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.headertitle{
+    width: 30%;
+}
+
+h1{
+    color: white;
+    text-transform: uppercase;
+    background-color: #58A4B0;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+h2{
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.blocright, .blocleft{
+    width: 40%;
+    height: 85%;
+}
+
+.blocright{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.blocright form{
+    text-align: left;
+}
+
+.blocrighttop{
+    width: 100%;
+    height: 100%;
+}
+
+.blocright input{
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 94%;
+}
+
+.blocright button{
+    color: white;
+    text-transform: uppercase;
+    background-color: #333333;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    width: 30%;
+    cursor: pointer;
+}
+
+button:hover{
+    color: #333333;
+    background-color: white;
+    transition: 0.5s;
+    
+}
+
+.addquestion{
+    background-color: white;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    height: 30px;
+    width: 93%;
+    padding-left: 10px;
+}
+
+.buttonquestion{
+    width: 5%;
+    height: 35px;
+    background-color: #333333;
+    border-radius: 0px 5px 5px 0px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+ul{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+ul li{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #333333;
+    background: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 90%;
+    list-style-type: none;
+    margin: 5px 0px;
+    text-align: left;
+    padding: 0px 10px ;
+}
+
+ul li i{
+    text-align: right;
+    cursor: pointer;
+}

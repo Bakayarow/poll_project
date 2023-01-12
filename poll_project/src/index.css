@@ -1,10 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
+
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --title-color : #58A4B0;
+  --btn-color : #2F343C;
 }
 
 code {
@@ -23,13 +28,33 @@ code {
   width: 100%;
 }
 
+.bloc--bg-gradient-rotate{
+  height: 70vh;
+  background-image: url(./assets/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.bloc--title {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--title-color);
+  color: white;
+  width: 20vw;
+  margin: 1em auto;
+}
+
 .btn--custom {
   display: block;
   text-align: center;
   width: 20vw;
   padding: 1em;
   margin: 20px auto;
-  background-color: #2f343c;
+  background-color: var(--btn-color);
   color: white;
   font-size: large;
 }

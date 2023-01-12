@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCirclePlay, faPen } from '@fortawesome/free-solid-svg-icons'
 
 function SessionsAVenir() {
   const navigate = useNavigate();
@@ -44,6 +46,12 @@ function SessionsAVenir() {
                     className='item-detail-btn'
                     onClick={() => navigate(`/session/detail/${session.id}`)}
                     >Voir</button>
+
+
+                    {/* <i><FontAwesomeIcon icon={faPen} /></i>
+                    <i><FontAwesomeIcon icon={faCirclePlay} /></i> */}
+
+
                 </div>
             ) ) }
         

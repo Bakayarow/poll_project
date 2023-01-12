@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+
 
 function SessionsTerminees() {
   const [sessionsEnd, setsessionsEnd ] = useState([])
@@ -38,6 +41,10 @@ function SessionsTerminees() {
                 {
                 sessionsEnd.map(session  => <li className='session--liste'>{session.name}</li>)
                }
+
+
+              {/* <i><FontAwesomeIcon icon={faChevronRight} /></i> */}
+
                
             </ul>
         </div>

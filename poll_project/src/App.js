@@ -3,6 +3,9 @@ import Login from "./Pages/Admin/Login/Login.jsx";
 import SessionsTerminees from "./Pages/Admin/Sessions-terminees/Sessions-terminees.jsx";
 import SessionsAVenir from "./Pages/Admin/Sessions-a-venir/Sessions-a-venir.jsx";
 import CreerSession from "./Pages/Admin/Creer-session/Creer-session.jsx";
+import CreerQuestions from "./Pages/Admin/Creer-questions/Creer-questions.jsx";
+import StartSession from "./Pages/Admin/Start-session/Start-session.jsx";
+import QuestionPage from "./Pages/Admin/Question-page/Question-page.jsx";
 import Question from "./Pages/User/Question/Question.jsx";
 
 import LoginUser from "./Pages/User/Login/Login.jsx";
@@ -26,12 +29,15 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route
-            path="/sessions-terminees"
+            path="/passed-sessions"
             element={<SessionsTerminees />}
           ></Route>
-          <Route path="/sessions-a-venir" element={<SessionsAVenir />}></Route>
-          <Route path="/creer-session" element={<CreerSession />}></Route>
+          <Route path="/coming-sessions" element={<SessionsAVenir />}></Route>
+          <Route path="/new-session" element={<CreerSession />}></Route>
+          <Route path="/start-session" element={<StartSession />}></Route>
+          <Route path="/question-page" element={<QuestionPage />}></Route>
           <Route path="/question" element={<Question />}></Route>
+          <Route path="/creer-questions" element={<CreerQuestions />}></Route>
           <Route path="/session/detail/:id" element={<SessionDetail />}></Route>
 
           <Route path="/join" element={<LoginUser />}></Route>
