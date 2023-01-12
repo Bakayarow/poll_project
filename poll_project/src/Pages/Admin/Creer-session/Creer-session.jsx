@@ -1,17 +1,40 @@
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function CreerSession() {
 
-  const [sessionName, setSessionName] = useState('');
-  const [sessionDate, setSessionDate] = useState('');
+  const [sessionData, setSessionData] = useState({
+    sessionName : null,
+    dateStart : null,
+    pin : generatePin(),
+    status : "coming"
+  })
+
+  const handleInputChange = (event) =>{
+    setSessionData({
+      ...sessionData, 
+      [event.target.name] : event.target.value
+    })
+  }
+
+  function generatePin() {
+    return Math.floor(Math.random()*90000)
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log('Nom de la session: ', sessionName);
-    console.log('Date de la session: ', sessionDate);
-    // Perform API call or other logic here
+
+    // const formatData = data : sessionData;
+    
+    axios.post('http://localhost:3000/api/sessions', sessionData)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   return (
@@ -26,17 +49,20 @@ function CreerSession() {
               NOM DE LA SESSION
               <input
               type="text"
-              value={sessionName}
-              onChange={event => setSessionName(event.target.value)}
+              name='sessionName'
+              onChange={handleInputChange}
               />
           </label>
           <br />
           <label className='form--label'>
               DATE DE LA SESSION
               <input
-              type="date"
-              value={sessionDate}
-              onChange={event => setSessionDate(event.target.value)}
+              type="datetime-local"
+              id="dateStart"
+              name="dateStart"
+              min="2023-01-01T00:00" 
+              max="2200-06-14T00:00"
+              onChange={handleInputChange}
               />
           </label>
           <br />

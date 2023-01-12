@@ -13,13 +13,13 @@ function Home() {
           <div className="bloc--content">
             <h1>VOS SESSIONS</h1>
             <hr className="title_line"/>
-            <Link to={'/sessions-terminees'}>
+            <Link to={'/passed-sessions'}>
               <button type="button" className="btn--custom">SESSIONS TERMINEES</button>
             </Link>
-            <Link to={'/sessions-a-venir'}>
+            <Link to={'/coming-sessions'}>
               <button type="button" className="btn--custom">SESSIONS A VENIR</button>
             </Link>
-            <Link to={'/creer-session'}>
+            <Link to={'/new-session'}>
               <button type="button" className="btn--custom">CREER UNE SESSION</button>
             </Link>            
           </div>
