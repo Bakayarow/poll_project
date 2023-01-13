@@ -1,58 +1,44 @@
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-
-  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
-  --title-color : #58A4B0;
-  --btn-color : #2F343C;
+    --title-color: #58A4B0;
+    --btn-color: #2F343C;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .bloc--bg-gradient {
-  background-image: url(./assets/img/bg-gradient.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+    background-image: url(./assets/img/bg-gradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.bloc--bg-gradient-rotate{
-  background-image: url(./assets/img/background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.bloc--bg-gradient-rotate {
+    background-image: url(./assets/img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .bloc--title {
-  padding: 20px;
-  border-radius: 5px;
-  background-color: var(--title-color);
-  color: white;
-  width: 20vw;
-  margin: 1em auto;
-}
-
-.btn--custom {
-  display: block;
-  text-align: center;
-  width: 20vw;
-  padding: 1em;
-  margin: 20px auto;
-  background-color: var(--btn-color);
-  color: white;
-  font-size: large;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--title-color);
+    color: white;
+    width: 20vw;
+    margin: 1em auto;
 }

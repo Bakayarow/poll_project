@@ -1,8 +1,8 @@
 .btn--custom {
     display: block;
     text-align: center;
-    width: 20vw;
-    padding: 1em;
+    min-width: 250px;
+    padding: 7px;
     margin: 20px auto;
     background-color: #2F343C;
     color: white;
@@ -14,15 +14,12 @@
     text-decoration: none;
 }
 
-.btn--custom:hover{
+.btn--custom:hover {
     background-color: white;
     color: #2F343C;
     transition: 500ms;
-
 }
 
 .title_line {
     width: 20vw;
 }
-
-
