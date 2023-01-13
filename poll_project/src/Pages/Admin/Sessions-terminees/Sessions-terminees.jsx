@@ -10,28 +10,12 @@ function SessionsTerminees() {
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-
  
   useEffect(() => {
     axios.get(`http://localhost:8082/api/sessions/end`).then((res) => { setData(res.data) })
   }, []);
 
   console.log(data);
-
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:8082/api/sessions/end`)
-  //     .then(response => response.json())
-  //     .then((usefulData) => {
-  //       console.log(usefulData);
-  //       setLoading(false);
-  //       setData(usefulData);
-  //     })
-  //     .catch((e) => {
-  //       console.error(`An error occurred: ${e}`)
-  //     });
-  // }, []);
 
 
 
