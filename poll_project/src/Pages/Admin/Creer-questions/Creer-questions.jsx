@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {useParams} from "react-router-dom"
+import {useParams, useNavigate} from "react-router-dom"
+
+
 import './style.css';
 
 
@@ -10,7 +12,7 @@ import Todo from '../../../Components/Todo/Todolist';
 
 
 function CreerQuestions() {
-  
+  const navigate = useNavigate();
   const {id} = useParams()
   
   const [sessionDetails, setSessionDetails ] = useState([])
@@ -50,7 +52,12 @@ function CreerQuestions() {
           <div className='blocmid'>
             <div className='topmid'>
             <h2>Questions de la session</h2>
-            <button type='submit'>Démarrer la session</button>
+            <button 
+                type='submit' 
+                onClick={() => navigate(`/start-session/${id}`)}
+            >
+                  Démarrer la session
+                 </button>
             </div>
             <Todo />
           </div>

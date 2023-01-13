@@ -1,9 +1,39 @@
+import React, { useState, useEffect } from 'react';
+import {useParams, useNavigate} from "react-router-dom"
+
+
+
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faList } from '@fortawesome/free-solid-svg-icons'
 
 function StartSession() {
+
+  const navigate = useNavigate();
+  const {id} = useParams()
+
+  const [sessionDetails, setSessionDetails ] = useState([])
+
+  const getSessionInfos = async () =>{
+    try {    
+        const res = await fetch(`http://localhost:1337/api/sessions/${id}`);
+        const data = await res.json()
+    
+        setSessionDetails(data.data.attributes)
+      
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
+  useEffect(() =>{
+    getSessionInfos ()
+  },[])
+
+
+  console.log(sessionDetails)
 
   return (
     <section >
@@ -17,13 +47,18 @@ function StartSession() {
           </div>
           <div className="bloc--pin-code">
             <h2>CODE SESSION</h2>
-            <p>63782</p>
+            <p>{sessionDetails.pin}</p>
           </div>
           <div className="bloc--participants">
             <h2>PARTICIPANTS</h2>
             <p>12/15</p>  
           </div>
-          <button className="btn--custom" type="submit">COMMENCER</button>
+          <button 
+            className="btn--custom" 
+            type="submit"
+            onClick={() => navigate(`/questions/session/${id}`)}
+          >
+            COMMENCER</button>
         </div>
     </section>
   );

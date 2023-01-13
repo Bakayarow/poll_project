@@ -36,8 +36,11 @@ function App() {
           ></Route>
           <Route path="/coming-sessions" element={<SessionsAVenir />}></Route>
           <Route path="/new-session" element={<CreerSession />}></Route>
-          <Route path="/start-session" element={<StartSession />}></Route>
-          <Route path="/question-page" element={<QuestionPage />}></Route>
+          <Route path="/start-session/:id" element={<StartSession />}></Route>
+          <Route
+            path="/questions/session/:id"
+            element={<QuestionPage />}
+          ></Route>
           <Route path="/question" element={<Question />}></Route>
           <Route
             path="/session/detail/:id"
@@ -57,7 +60,7 @@ function App() {
           {/* doit etre dynamique, slug dynamique */}
           <Route path="/wait" element={<Wait />}></Route>
 
-          <Route path="/session-end" element={<SessionEnd />}></Route>
+          <Route path="/session/end/:id" element={<SessionEnd />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
