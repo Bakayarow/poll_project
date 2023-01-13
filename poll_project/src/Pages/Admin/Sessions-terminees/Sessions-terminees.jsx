@@ -1,12 +1,26 @@
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from 'react'; 
 import axios from 'axios';
 
 
 function SessionsTerminees() {
+  const [sessionsEnd, setsessionsEnd ] = useState([])
+
+  const getsessionsEnd = async () =>{
+    try {    
+        const res = await fetch("http://localhost:1337/api/sessions/end");
+        const data = await res.json()
+    
+        setsessionsEnd(data)
+      
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,7 +30,6 @@ function SessionsTerminees() {
   }, []);
 
   console.log(data);
-
 
 
   return (

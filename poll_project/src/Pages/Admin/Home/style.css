@@ -14,6 +14,13 @@
     text-decoration: none;
 }
 
+.btn--custom:hover{
+    background-color: white;
+    color: #2F343C;
+    transition: 500ms;
+
+}
+
 .title_line {
     width: 20vw;
 }

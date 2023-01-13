@@ -1,5 +1,6 @@
 .bloc--display-block {
     display: block;
+    position: relative;
 }
 .bloc--display-block div{
     margin: 10%;
@@ -32,4 +33,20 @@
     font-size: 65px;
     font-weight: bolder;
     margin: auto;
+}
+
+.return{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    border-radius: 5px;
+    top: -120px;
+    left: 0;
+    text-transform: uppercase;
+    width: 200px;
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
 }
