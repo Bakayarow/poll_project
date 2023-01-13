@@ -24,8 +24,6 @@ function SessionsTerminees() {
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-
  
   useEffect(() => {
     axios.get(`http://localhost:1337/api/sessions/end`).then((res) => { setData(res.data) })
