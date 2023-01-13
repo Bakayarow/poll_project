@@ -1,7 +1,7 @@
 .form-login {
     background-image: url("../../../assets/img/background.png");
     height: inherit;
-    max-height: 550px;
+    max-height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -50,6 +50,7 @@ form label {
     text-transform: uppercase;
     margin-top: 15px;
     float: left;
+    cursor: pointer;
 }
 
 .form-grid .pin-code {
