@@ -10,12 +10,8 @@ function Login() {
   });
 
 
-  const handleChange = ({currentTarget}) => {
-    const {value, name} = currentTarget
-    setCredentials({
-      ...creadentials,
-      [name] : value
-    })
+  const handleChange= () =>{
+
   }
 
 
@@ -25,18 +21,18 @@ function Login() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        identifier: "test@gmail.com",
-        password: "0000000"
+        identifier: "leotest@gmail.com",
+        password: "Deus2013ÅÅÅ@"
     })
   };
 
-    const res = await fetch('http://localhost:8082/api/auth/local',requestOptions)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error.error))
+   const res = await fetch(`http://localhost:1337/api/auth/local`,requestOptions)
+   .then(response => response.json())
+   .then(data => console.log(data))
+   .catch(error => console.log(error.error))
 
   }
-
+ 
   return (
     <section>
         <div className="header-logo-container">

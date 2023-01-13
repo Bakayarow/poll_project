@@ -5,16 +5,11 @@ import './style.css';
 import Nav from '../../../Components/Nav/Nav';
 
 
-function StartSession() {
+function StartSession({socket}) {
 
   const navigate = useNavigate();
   const {id} = useParams()
   const [itemsSession, setItemsSession ] = useState([])
-
-
-
-
-
 
   const getItemsBySession = async () =>{
     try {    
@@ -54,10 +49,7 @@ function StartSession() {
       });
   };
 
-
-
-  
-  
+  socket.emit('questions', itemsSession[selected]);
 
   return (
     <section >
@@ -77,7 +69,7 @@ function StartSession() {
           <button 
           className="btn--custom" 
            type="submit"
-           onClick={() => navigate(`/session/end/${id}`)}
+           onClick={() => navigate(`/session/session/${id}`)}
         >
          Terminer la Section
        </button>

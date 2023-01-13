@@ -17,7 +17,8 @@ const MyComponent = () => {
         try {    
             const res = await fetch("http://localhost:1337/api/items/section/20");
             const data = await res.json()
-        
+
+         
             setsetionItems(data)
           
         } catch (error) {

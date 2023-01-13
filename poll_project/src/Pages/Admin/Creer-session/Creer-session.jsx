@@ -30,7 +30,7 @@ function CreerSession() {
     
     axios.post('http://localhost:8082/api/sessions', sessionData)
       .then(function (response) {
-        console.log(response);
+      
       })
       .catch(function (error) {
         console.log(error);

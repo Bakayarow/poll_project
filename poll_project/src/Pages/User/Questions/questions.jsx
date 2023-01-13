@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 
-function Example() {
+function Example({socket}) {
+
+  const [adminquestion, setAdminquestion] = useState([]);
+  
+
+  useEffect(() => {
+    socket.on('adminQuestions', (data) => setAdminquestion(data));
+  }, [socket, adminquestion]);
+
+
+
     return (
       <div>
         <div className='banner-top'>
           <p>Session NAME</p>
         </div>
         <div className='banner-question'>
-          <p>Voici la question à laquelle je dois répondre ?</p>
+          <p key={adminquestion.id}> {adminquestion.length > 0 ? "Bientot les questions" : adminquestion.name } </p>
         </div>
 
 

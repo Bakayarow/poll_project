@@ -41,6 +41,7 @@ form label {
 }
 
 .btn-submit {
+    width: auto;
     background-color: #2F343C;
     border: none;
     color: #F4F4F4;

@@ -8,10 +8,20 @@ import Nav from '../../../Components/Nav/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faList } from '@fortawesome/free-solid-svg-icons'
 
-function StartSession() {
+function StartSession({socket}) {
 
   const navigate = useNavigate();
   const {id} = useParams()
+
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    socket.on('newUserResponse', (data) => setUsers(data));
+  }, [socket, users]);
+
+ 
+
 
   const [sessionDetails, setSessionDetails ] = useState([])
 
@@ -33,7 +43,6 @@ function StartSession() {
   },[])
 
 
-  console.log(sessionDetails)
 
   return (
     <section >
@@ -51,7 +60,7 @@ function StartSession() {
           </div>
           <div className="bloc--participants">
             <h2>PARTICIPANTS</h2>
-            <p>12/15</p>  
+            <p>{users.length}/15</p>  
           </div>
           <button 
             className="btn--custom" 
