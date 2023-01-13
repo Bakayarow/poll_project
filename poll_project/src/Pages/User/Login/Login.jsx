@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import logo from '../../../logo.png';
+import logo from '../../../assets/img/logo.png';
 import './style.css';
 
 function LoginUser({socket}) {
