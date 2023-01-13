@@ -39,6 +39,5 @@ code {
     border-radius: 5px;
     background-color: var(--title-color);
     color: white;
-    width: 20vw;
     margin: 1em auto;
 }
