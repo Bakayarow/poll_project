@@ -14,12 +14,12 @@ function Nav() {
         </div>
         <div className='navright'>
             <div className='firsticon'>
-              <a href="">
+              <a href="/">
                 <i><FontAwesomeIcon icon={faHome} /></i>
               </a>
             </div>
             <div className='secondicon'>
-            <a href="">
+            <a href="/login">
               <i><FontAwesomeIcon icon={faSignOutAlt} /></i>
             </a>
             </div>

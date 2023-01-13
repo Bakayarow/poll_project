@@ -1,4 +1,4 @@
-.navcontainer{
+.navcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,43 +6,46 @@
     height: 10vh;
 }
 
-.logonav{
-    width: 14%;
-    height: 90%;
+.logonav {
+    width: 120px;
     padding: 10px;
+    height: min-content;
 }
 
-.navleft{
+.navleft {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
 }
 
-.navSmallleft{
+.navSmallleft {
     width: 50%;
-}  
+}
 
-
-.navright{
+.navright {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
 }
 
-.firsticon, .secondicon{
+.firsticon,
+.secondicon {
     width: 15%;
 }
- .navright i{
+
+.backicon {
+    font-size: 25px;
+}
+
+.navright i {
     color: #333333;
     font-size: 25px;
- }
+}
 
- .navleft i{
+.navleft i {
     color: #333333;
     font-size: 25px;
- }
-
+}

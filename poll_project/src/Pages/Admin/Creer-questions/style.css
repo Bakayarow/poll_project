@@ -1,30 +1,29 @@
-.bloc--bg-gradient{
+.bloc--bg-gradient {
     display: flex;
-    justify-content: center;
+    padding: 150px 0;
     align-items: center;
     justify-content: space-around;
 }
 
-.headersmall{
+.headersmall {
     height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.headertitle{
+.headertitle {
     width: 30%;
 }
-.topmid{
+
+.topmid {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    
 }
 
-h1{
+h1 {
     color: white;
     text-transform: uppercase;
     background-color: #58A4B0;
@@ -33,37 +32,33 @@ h1{
     font-weight: 600;
 }
 
-h2{
+h2 {
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
 }
 
-.blocmid{
+.blocmid {
     width: 60%;
     height: 85%;
 }
 
-
-button{
+button {
     background-color: #333333;
     color: white;
     width: 120px;
     height: 40px;
     border-radius: 5px;
     margin-bottom: 20px;
-    
 }
 
-
-button:hover{
+button:hover {
     color: #333333;
     background-color: white;
     transition: 0.5s;
-    
 }
 
-.addquestion{
+.addquestion {
     background-color: white;
     border-radius: 5px 0px 0px 5px;
     border: none;
@@ -72,7 +67,7 @@ button:hover{
     padding-left: 10px;
 }
 
-.buttonquestion{
+.buttonquestion {
     width: 5%;
     height: 35px;
     background-color: #333333;
@@ -82,15 +77,15 @@ button:hover{
     cursor: pointer;
 }
 
-ul{
+ul {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
 }
-ul li{
+
+ul li {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -102,10 +97,10 @@ ul li{
     width: 90%;
     list-style-type: none;
     margin: 5px 0px;
-    padding: 0px 10px ;
+    padding: 0px 10px;
 }
 
-ul li i{
+ul li i {
     text-align: right;
     cursor: pointer;
 }

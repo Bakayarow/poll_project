@@ -1,36 +1,42 @@
-.chart div svg g:last-child rect:nth-child(n+1){
+.chart div svg g:last-child rect:nth-child(n+1) {
     fill: #58C270;
 }
-.chart div svg g:last-child rect:nth-child(n+2){
+
+.chart div svg g:last-child rect:nth-child(n+2) {
     fill: #83E0A3;
 }
-.chart div svg g:last-child rect:nth-child(n+3){
+
+.chart div svg g:last-child rect:nth-child(n+3) {
     fill: #FF8F50;
 }
-.chart div svg g:last-child rect:nth-child(n+4){
+
+.chart div svg g:last-child rect:nth-child(n+4) {
     fill: #FF4949;
 }
-.chart div svg g:last-child rect:nth-child(n+5){
+
+.chart div svg g:last-child rect:nth-child(n+5) {
     fill: red;
 }
-.chart div svg g:last-child rect:nth-child(n+6){
+
+.chart div svg g:last-child rect:nth-child(n+6) {
     fill: white;
     outline-style: solid;
     outline-width: 1px;
     outline-offset: -1px;
 }
-.chart div svg g:last-child rect:nth-child(n+7){
+
+.chart div svg g:last-child rect:nth-child(n+7) {
     fill: black;
 }
-.chart{
+
+.chart {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-
 }
 
-.chart h2{
+.chart h2 {
     background-color: #2F343C;
     margin: 0;
     padding: 25px;
@@ -38,18 +44,20 @@
     border-radius: 10px 10px 0 0;
 }
 
-.chart-left, .chart-right{
+.chart-left,
+.chart-right {
     width: 600px;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px -3px rgb(145 145 145);
 }
-.chart-right{
+
+.chart-right {
     padding: 15px;
 }
 
-.chart-left{
+.chart-left {
     box-shadow: 0px 0px 10px -3px rgb(145 145 145);
 }
 
@@ -62,17 +70,23 @@
     padding: 0 30px;
 }
 
-.answers{
+.answers {
     overflow-y: scroll;
     max-height: 500px;
 }
 
-.colors-chart{
-    width: 1290px;
+.colors-chart {
+    max-width: 1290px;
     padding: 30px 50px 0 50px;
+    display: flex;
+    gap: 15px;
     margin: auto;
+    flex-wrap: wrap;
 }
-.color-chart{
+
+.color-chart {
     display: flex;
     align-items: center;
+    width: 32%;
+    min-width: 265px;
 }
