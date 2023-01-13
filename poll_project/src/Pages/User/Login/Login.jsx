@@ -46,9 +46,9 @@ function LoginUser({socket}) {
     const res = await fetch("http://localhost:1337/api/participants",requestOptions);
     if(res.status === 200){
       socket.emit('newUser', {username : userData.firstName});
+      localStorage.setItem('userEmail', userData.email)
       navigate(`/room/20`)
-      
-     
+  
     }
 
 

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {useParams, useNavigate} from "react-router-dom"
+import {useParams, useNavigate, Link} from "react-router-dom"
+
+
 
 
 
@@ -43,6 +45,9 @@ function StartSession({socket}) {
   },[])
 
 
+ 
+
+
 
   return (
     <section >
@@ -66,8 +71,7 @@ function StartSession({socket}) {
             className="btn--custom" 
             type="submit"
             onClick={() => navigate(`/questions/session/${id}`)}
-          >
-            COMMENCER</button>
+          >COMMENCER</button>
         </div>
     </section>
   );
