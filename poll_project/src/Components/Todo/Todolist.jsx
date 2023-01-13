@@ -30,6 +30,8 @@ function TodoList() {
     };
 
     const res = await fetch(`http://localhost:1337/api/items`,requestOptions);
+
+    
     getItemsBySession()
 
     } catch (error) { console.log(error) }

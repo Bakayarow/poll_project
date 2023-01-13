@@ -14,6 +14,7 @@ function SessionsAVenir() {
     try {    
         const res = await fetch("http://localhost:1337/api/sessions/coming");
         const data = await res.json()
+
     
         setSessionsComing(data)
       

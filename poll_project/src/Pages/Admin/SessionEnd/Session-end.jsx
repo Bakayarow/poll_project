@@ -1,9 +1,41 @@
-import React from "react";
+
+import React, { useState, useEffect } from 'react';
+import {useParams, useNavigate} from "react-router-dom"
 import VerticalBarGraph from "@chartiful/react-vertical-bar-graph";
 import './style.css';
 import Nav from '../../../Components/Nav/Nav';
 
 export default function SessionEnd() {
+
+  const {id} = useParams()
+
+
+  const [sessionDetails, setSessionDetails ] = useState([])
+
+  const getSessionInfos = async () =>{
+    try {    
+        const res = await fetch(`http://localhost:1337/api/sessions/${id}`);
+        const data = await res.json()
+    
+        setSessionDetails(data.data.attributes)
+      
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
+  useEffect(() =>{
+    getSessionInfos ()
+  },[])
+
+
+
+
+
+
+
+
   const config = {
     hasXAxisBackgroundLines: false,
     hasYAxisBackgroundLines: false,
@@ -19,6 +51,8 @@ export default function SessionEnd() {
     <div>
       <Nav />
       <div >
+        <h1> Détail de la session : {sessionDetails.name}</h1>
+        <h2>Réalisé le {sessionDetails.datestart}</h2>
         <div className="chart">
           <div className="chart-left">
             <VerticalBarGraph className='john'

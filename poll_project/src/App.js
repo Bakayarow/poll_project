@@ -22,6 +22,11 @@ import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SessionDetail from "./Pages/Admin/SessionDetail/SessionDetail.jsx";
+import Example from "./Pages/User/Questions/questions.jsx";
+
+//Socket.io
+import socketIO from "socket.io-client";
+const socket = socketIO.connect("http://localhost:1337");
 
 function App() {
   return (
@@ -29,23 +34,29 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
+          <Route path="/login" element={<Login socket={socket} />}></Route>
           <Route
             path="/passed-sessions"
             element={<SessionsTerminees />}
           ></Route>
           <Route path="/coming-sessions" element={<SessionsAVenir />}></Route>
           <Route path="/new-session" element={<CreerSession />}></Route>
-          <Route path="/start-session" element={<StartSession />}></Route>
-          <Route path="/question-page" element={<QuestionPage />}></Route>
-          <Route path="/question" element={<Question />}></Route>
+          <Route
+            path="/start-session/:id"
+            element={<StartSession socket={socket} />}
+          ></Route>
+          <Route
+            path="/questions/session/:id"
+            element={<QuestionPage socket={socket} />}
+          ></Route>
+          <Route path="/room/:id" element={<Example socket={socket} />}></Route>
           <Route
             path="/session/detail/:id"
             element={<CreerQuestions />}
           ></Route>
           {/* <Route path="/session/detail/:id" element={<SessionDetail />}></Route> */}
 
-          <Route path="/join" element={<LoginUser />}></Route>
+          <Route path="/join" element={<LoginUser socket={socket} />}></Route>
 
           {/* doit etre dynamique, slug dynamique */}
           <Route path="/questions" element={<Questions />}></Route>
@@ -57,7 +68,7 @@ function App() {
           {/* doit etre dynamique, slug dynamique */}
           <Route path="/wait" element={<Wait />}></Route>
 
-          <Route path="/session-end" element={<SessionEnd />}></Route>
+          <Route path="/session/end/:id" element={<SessionEnd />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

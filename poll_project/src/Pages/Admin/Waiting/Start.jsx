@@ -15,9 +15,10 @@ const MyComponent = () => {
 
     const getSetionItems = async () =>{
         try {    
-            const res = await fetch("http://localhost:1337/api/items/section/18");
+            const res = await fetch("http://localhost:1337/api/items/section/20");
             const data = await res.json()
-        
+
+         
             setsetionItems(data)
           
         } catch (error) {
@@ -52,9 +53,8 @@ const MyComponent = () => {
     };
 
 
-  
 
-    console.log(usersArray);
+
 
     return (
         <div>
